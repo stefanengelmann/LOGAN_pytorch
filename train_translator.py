@@ -58,6 +58,7 @@ a_train_dataloader = torch.utils.data.DataLoader(a_train_dataset, batch_size=arg
 b_train_dataloader = torch.utils.data.DataLoader(b_train_dataset, batch_size=args.batch_size, pin_memory=True, num_workers=4, shuffle=True, drop_last=True)
 
 # TODO: test dataloaders?
+print("No validation of the translator for now!")
 
 print(f"Number of A train batches: {len(a_train_dataloader)}")
 print(f"Number of B train batches: {len(b_train_dataloader)}")
