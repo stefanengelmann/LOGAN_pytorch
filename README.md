@@ -58,6 +58,8 @@ Data can be found on the original [LOGAN](https://github.com/kangxue/LOGAN) repo
 - EMD loss: https://github.com/daerduoCarey/PyTorchEMD
 - Some code including the Chamfer loss, data loader and gradient penalty is adopted from https://github.com/Yunyung/Characteristic-preserving-Latent-Space-for-Unpaired-Cross-domain-Translation-of-3D-Point-Clouds
 
+***
+
 The code has been tested under
 - Ubuntu 22.04
 - Python 3.11
