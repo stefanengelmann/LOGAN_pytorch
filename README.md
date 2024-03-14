@@ -2,12 +2,14 @@
 This repository is a PyTorch implementation of the [LOGAN: Unpaired Shape Transform in Latent Overcomplete Space](https://arxiv.org/pdf/1903.10170.pdf) paper
 
 # Setup
+Create a new `conda` environment
 ```shell
 conda create -n logan_pytorch python=3.11
-pip install -r requirements
+pip install -r requirements.txt
 ```
-This implementation uses CUDA optimized implementation of the [PointNet++ Set Abstraction layers](https://github.com/erikwijmans/Pointnet2_PyTorch) and the [EMD loss](https://github.com/daerduoCarey/PyTorchEMD) which both requires code to be compiled with the NVIDIA CUDA Compiler Driver (NVCC)
-Check if you have NVCC installed:
+This implementation uses CUDA optimized implementation of the [PointNet++ Set Abstraction layers](https://github.com/erikwijmans/Pointnet2_PyTorch) and [EMD loss](https://github.com/daerduoCarey/PyTorchEMD) which both require code to be compiled with the NVIDIA CUDA Compiler Driver (NVCC).
+
+Check if NVCC is installed
 ```shell
 nvcc -V
 ```
@@ -15,7 +17,7 @@ If not, check your CUDA version with
 ```shell
 nvidia-smi
 ```
-and install the relevant version with conda (here shown with 12.2)
+and install the relevant version inside the `conda` environment (here shown with CUDA 12.2)
 ```shell
 conda install cuda -c nvidia/label/cuda-12.2.0
 ```
@@ -54,4 +56,10 @@ Data can be found on the original [LOGAN](https://github.com/kangxue/LOGAN) repo
 - PointNet++ Set Abstraction layers: https://github.com/erikwijmans/Pointnet2_PyTorch 
 - EMD loss: https://github.com/daerduoCarey/PyTorchEMD
 - Some code including the Chamfer loss, data loader and gradient penalty is adopted from https://github.com/Yunyung/Characteristic-preserving-Latent-Space-for-Unpaired-Cross-domain-Translation-of-3D-Point-Clouds
+
+The code has been tested under
+- Ubuntu 22.04
+- Python 3.11
+- PyTorch 2.2.1
+- CUDA 12.2
 
