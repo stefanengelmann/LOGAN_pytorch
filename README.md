@@ -46,7 +46,7 @@ Inference can be performed visually with K3D
 ```shell
 python inference.py --root_dir=path/to/data/ 
 ```
-Screenshot here
+![Reconstructed example](figure/reconstructed_ex.png)
 
 # Data
 Data can be found on the original [LOGAN](https://github.com/kangxue/LOGAN) repository page
