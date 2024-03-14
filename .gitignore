@@ -9,4 +9,4 @@ weights/
 pointnet2_ops_lib/build/
 pointnet2_ops_lib/pointnet2_ops.egg-info/
 losses/PyTorchEMD/build/
-losses/PyTorchEMD/build/emd_ext.egg-info/
+losses/PyTorchEMD/emd_ext.egg-info/
