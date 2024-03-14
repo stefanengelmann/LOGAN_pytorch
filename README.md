@@ -2,6 +2,12 @@
 This repository is a PyTorch implementation of the [LOGAN: Unpaired Shape Transform in Latent Overcomplete Space](https://arxiv.org/pdf/1903.10170.pdf) paper
 
 # Setup
+The code has been tested under
+- Ubuntu 22.04
+- Python 3.11
+- PyTorch 2.2.1
+- CUDA 12.2
+
 Create a new `conda` environment
 ```shell
 conda create -n logan_pytorch python=3.11
@@ -58,11 +64,5 @@ Data can be found on the original [LOGAN](https://github.com/kangxue/LOGAN) repo
 - EMD loss: https://github.com/daerduoCarey/PyTorchEMD
 - Some code including the Chamfer loss, data loader and gradient penalty is adopted from https://github.com/Yunyung/Characteristic-preserving-Latent-Space-for-Unpaired-Cross-domain-Translation-of-3D-Point-Clouds
 
----
 
-The code has been tested under
-- Ubuntu 22.04
-- Python 3.11
-- PyTorch 2.2.1
-- CUDA 12.2
 
