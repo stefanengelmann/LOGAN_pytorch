@@ -46,6 +46,7 @@ Inference can be performed visually with K3D
 ```shell
 python inference.py --root_dir=path/to/data/ 
 ```
+
 ![Reconstructed example](figure/reconstructed_ex.png)
 
 # Data
