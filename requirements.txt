@@ -1,0 +1,7 @@
+torch
+numpy
+tqdm
+k3d
+numpy
+pandas
+pyntcloud

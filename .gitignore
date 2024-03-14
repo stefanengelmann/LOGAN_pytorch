@@ -1,0 +1,8 @@
+__pycache__/
+*.ipynb
+*.sh
+data/
+*.err
+*.out
+weights/
+*.html

@@ -1,0 +1,10 @@
+# ninja log v5
+1	28406	1710416667602662881	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/group_points.o	cdb8db978c27f81a
+3	28984	1710416668182683342	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/sampling.o	446bf85d6c070f34
+2	29585	1710416668782704508	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/interpolate.o	3d87eb8640411449
+1	29673	1710416668870707613	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/ball_query.o	fa15068e0ae8acf9
+1	34126	1710416673322864658	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/bindings.o	658286359f38c68f
+1	142962	1710416782106698086	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/ball_query_gpu.o	fb08ad496f173e63
+2	143865	1710416783022730335	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/interpolate_gpu.o	e9b238ee2009976e
+2	144287	1710416783438744981	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/group_points_gpu.o	191a001a39f862ec
+3	148391	1710416787530889046	/nfshome/stefan/LOGAN_pytorch/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-311/pointnet2_ops/_ext-src/src/sampling_gpu.o	603f3916574d2d8c
