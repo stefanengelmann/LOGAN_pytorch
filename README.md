@@ -8,7 +8,7 @@ The code has been tested under
 - PyTorch 2.2.1
 - CUDA 12.2
 
-Create a new `conda` environment
+Create a new `conda` environment and install the required libraries
 ```shell
 conda create -n logan_pytorch python=3.11
 pip install -r requirements.txt
@@ -37,7 +37,7 @@ pip install pointnet2_ops_lib/.
 Training LOGAN is a two-step process. First the autoencoder, then the translator
 ```shell
 python train_ae.py --root_dir=path/to/data/ --save_best
-python train_translator --root_dir=path/to/data/ --save_models
+python train_translator.py --root_dir=path/to/data/ --save_models
 ```
 
 # Evaluation
