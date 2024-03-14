@@ -16,7 +16,7 @@ parser.add_argument('--t_b2a_model_path', type=str, default='weights/best_transl
 
 # Hyperparameters
 parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu', help='device (default: cuda if available else cpu)')
-parser.add_argument('--batch_size', type=int, default=2, help='input batch size for inference (default: 2)')
+parser.add_argument('--batch_size', type=int, default=32, help='input batch size for inference (default: 32)')
 
 # Data
 parser.add_argument('--root_dir', type=str, default='data/', help='root directory of the dataset (default: data/)')
@@ -38,8 +38,8 @@ print(f"Number of A test samples: {len(a_test_dataset)}")
 print(f"Number of B test samples: {len(b_test_dataset)}")
 
 # Create dataloaders
-a_train_dataloader = torch.utils.data.DataLoader(a_test_dataset, batch_size=args.batch_size, pin_memory=True, num_workers=4, shuffle=True, drop_last=True)
-b_train_dataloader = torch.utils.data.DataLoader(b_test_dataset, batch_size=args.batch_size, pin_memory=True, num_workers=4, shuffle=True, drop_last=True)
+a_test_dataloader = torch.utils.data.DataLoader(a_test_dataset, batch_size=args.batch_size, pin_memory=True, num_workers=4, shuffle=False)
+b_test_dataloader = torch.utils.data.DataLoader(b_test_dataset, batch_size=args.batch_size, pin_memory=True, num_workers=4, shuffle=False)
 
 # Initialize models
 autoencoder = Autoencoder(return_zi=False).to(device).eval()
@@ -55,7 +55,7 @@ T_B2A.load_state_dict(torch.load(args.t_b2a_model_path, map_location=device))
 
 # Inference
 with torch.no_grad():
-    for i, (data_A, filename) in enumerate(a_train_dataloader):
+    for i, (data_A, filename) in enumerate(a_test_dataloader):
         data_A = data_A.to(device)
         z_A = encoder(data_A)
         z_A2B = T_A2B(z_A)
@@ -72,10 +72,8 @@ with torch.no_grad():
             with open(filename[j][:-3]+'html','w', encoding="utf-8") as fp:
                 fp.write(plot.get_snapshot())
             input("Press Enter to continue...")
-        if i == 0:
-            break
 
-    for i, (data_B, filename) in enumerate(b_train_dataloader):
+    for i, (data_B, filename) in enumerate(b_test_dataloader):
         data_B = data_B.to(device)
         z_B = encoder(data_B)
         z_B2A = T_B2A(z_B)
@@ -92,7 +90,4 @@ with torch.no_grad():
             with open(filename[j][:-3]+'html','w', encoding="utf-8") as fp:
                 fp.write(plot.get_snapshot())
             input("Press Enter to continue...")
-        if i == 0:
-            break
-    
 
